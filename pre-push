@@ -1,0 +1,6 @@
+#!/bin/sh
+# Git pre-push hook - 验证推送的 tag 版本
+
+# 调用 Node.js 脚本进行验证
+node "$(dirname "$0")/validate-tag-push.cjs" "$@"
+

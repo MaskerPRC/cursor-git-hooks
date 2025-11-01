@@ -1,0 +1,6 @@
+#!/bin/sh
+# Git pre-tag hook - 验证创建 tag 时的版本
+# 注意: Git 本身不支持 pre-tag hook，这个脚本需要通过 Git alias 或包装器调用
+
+node "$(dirname "$0")/validate-tag.cjs" "$1"
+
